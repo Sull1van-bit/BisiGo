@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="BisiGo: Platform belajar Bahasa Isyarat Indonesia (BISINDO) interaktif berbasis kurikulum terstruktur dan deteksi kamera kecerdasan buatan." />
+    <meta name="theme-color" content="#1A8CFF" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <title>BisiGo - Mulai berbicara tanpa suara.</title>
+    <script>
+      try {
+        var s = JSON.parse(localStorage.getItem('bisigo_state') || '{}');
+        var d = (s && (s.theme === 'dark' || s.theme === 'light')) ? s.theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (d) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="bg-white dark:bg-[#0F172A] text-[#1E293B] dark:text-[#F8FAFC] font-sans antialiased min-h-screen selection:bg-[#E6F3FF] selection:text-[#0066CC] dark:selection:bg-[#1A8CFF]/30 dark:selection:text-[#60B2FF] transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
